@@ -1,5 +1,6 @@
 #pragma once
 #include "cocos2d.h"
+#include "Base.h"
 
 class Tiled : public cocos2d::Layer
 {

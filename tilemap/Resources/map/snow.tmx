@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="7">
+ <tileset firstgid="1" name="a1" tilewidth="32" tileheight="32" tilecount="256" columns="16">
+  <image source="a1.png" trans="ffffff" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="257" name="a2" tilewidth="32" tileheight="32" tilecount="3880" columns="8">
+  <image source="a2.png" trans="ffffff" width="256" height="15520"/>
+ </tileset>
+ <tileset firstgid="4137" name="collision" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="white.jpg" trans="ffffff" width="32" height="32"/>
+ </tileset>
+ <layer name="background" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzN2Hdv00AYx/HYrDLKVBGUIYHYDXtvCmW27CExJaYELUhMiQ4k9ii0vAB4B7wE3gh77733+BpscT3u7EtzbvzHR04uzvn55fGdpRQ6qVShASfhTDJEZbmCq7iG67iBm7iF2wnM4WrmuIO7uIf7eICHeITHCcjhKsjfH+qmUk84PsUzPMcLvMQrvPbPiaP2Al9YjqgMXm2BN7x/i3d4jw/4iE/4LJwbR4awHGG/v5zB84Wxr/iG7/iBn/iFlGs/R4ETnSPTDH/qg4tmaI4WaIlWyBPOK7KUxSRH2HrW5WiNNmiLdshHe3RAxxzlyPeFzSNmaMH7Thw7owsu8P4iuvK6jmM3iznE69rO4Z3bnWMheqAneqG3n6POsZ/Dq/0ETuKUJkeeL19Tt+re6oO+ft39OPbHAAx048kx1J+3HucjcujWg2683vn/9w+uF4zZzBGMDTLIoVrTYVQ5xPFscgRzDcNwg/URZEgb9EB2KRXek/oseiEaIdSky6HrYZ2j/70Dl1P/7i9VjkD3lJ08un6oMqQVOXT3rLxOivzvp6XxOHPoaovKocqi2m+bqh+Z5FBlUu2Jqmy2Msg5hnj9Rzokh2mWsL1A10sbWbzjKIzGmCx6ImuqDKJJmIwpis/knqQVe49co0nP4jATs1Ai1o9hGK7oS9Abuea464wSrI8yYWwsxmE8JghZvM/kLEmhWh9TMQ3TMcP5/35PYhbV+piNOZiLef6YLktS8qjWx0IswmIsEcZV+2lSsixAqfN3fQx21M8Tke75kOscYt0jHf3zxCSLaZ44fgOx7olO+PPEVp44eirWXeyo10s2eXT1ZdtTmVj3fKfhesl0LtO6gjGbObKp2zSX6Xi2ov7nsZEl7n0u32n4n9V25t6BclRgJ3Y14npR9ceZw7ObufdgL/ZhPw408npNmUXOcZB5K1GFatTgkIVrqWq3mUXOcZg5j+AojuE4Tljsf1x9kXOcZr4zqMVZnEOd5b0ljixyDk8x883ELJRgNubE0BPd/dZY8v40HwtQijIsxCLX3l4W1ZPGZFLtT0uxDMuxAiuxyrW7l2WSyWQO1f60GmuwFuuwHhvc+PYyG31S7U8bsQmbsQVbsc2Nfy8zzaHKo9uftnvrBuWowM6Qc23myCSL0brBHuzFPuy3XGtTrZ2DqEQVqlGT0BxRWQ7jCI7iGI7nKIdJprDvnMYZ1OIsziUghy5LrmuylSXX9djI09Z//RsPrRfI
+  </data>
+ </layer>
+ <objectgroup name="object">
+  <object id="6" name="zhaoyun" x="33" y="1541" width="24" height="19"/>
+ </objectgroup>
+ <layer name="collision" width="50" height="50" opacity="0.42">
+  <properties>
+   <property name="Collidable" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztl1sKxCAMRQvd/ya7kvkqSDDjNS8T64F+jNWYo6Yyz31dD/BkB3FAXFb7f8HDIoanSxvfYu4VHjS+xbzRHr34FnNm9LB28QD1mK1xyTst0R6r60Na70ibBR513otL272w9mhjoe0Wc3l6cHviVSt0DqRmJX28vsXcfiBjpP2iPNAxM32l41G0HqOcor5bknNF+86ub2Sdo7mMHm6cJ9J15XLX7JkGzT0cmeeIyO+9J8jZqMDOHm17Fbi9qAZ3J1ZzmbnPMrOjR/u7GlXzpuzmsdM9WLnmj0cuRv+HqsCtffX9GJ2trH4zHplrR7MX2T3ou399s3i89HLics2YP0f2dUc5HrnYxeMQy3tOfidOvKU=
+  </data>
+ </layer>
+</map>
