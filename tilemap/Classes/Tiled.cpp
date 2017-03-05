@@ -36,11 +36,12 @@ void Tiled::onEnter()
 	float x = spPoint["x"].asFloat();
 	float y = spPoint["y"].asFloat();
 	// 添加精灵
-	player = Sprite::create("ninja.png");
-	float spriteWidth = Base::getInstance()->getSpriteWidth();
-	float spriteHeight = Base::getInstance()->getSpriteHeight();
-	player->setContentSize(Size(spriteWidth, spriteHeight));
-	player->setPosition(Vec2(x + spriteWidth / 2, y + spriteHeight / 2));
+	player = Sprite::create("zhaoyun.png");
+	float spriteWidth = Base::getInstance()->getSpriteWidth(); // 精灵宽度
+	float spriteHeight = Base::getInstance()->getSpriteHeight(); // 精灵高度
+	float tileWidth = tileMap->getTileSize().width; // tile size
+	player->setContentSize(Size(spriteWidth, spriteHeight)); // 设置精灵大小
+	player->setPosition(Vec2(x + tileWidth / 2, y + tileWidth / 2));
 	this->addChild(player, 2, 200);
 	this->setViewPointCenter(player->getPosition());
 	// 获取碰撞层

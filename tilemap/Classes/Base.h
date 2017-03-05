@@ -13,7 +13,7 @@ private:
 	static Base* instance;
 	// ¾«Áésize
 	struct SPRITE{
-		float width = 32; float height = 32;
+		float width = 48; float height = 64;
 	}sprite;
 };
 
