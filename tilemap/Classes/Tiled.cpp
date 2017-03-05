@@ -22,6 +22,11 @@ bool Tiled::init()
 
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Vec2 origin = Director::getInstance()->getVisibleOrigin();
+
+	return true;
+}
+void Tiled::onEnter()
+{
 	// 加载地图
 	tileMap = TMXTiledMap::create("map/snow.tmx");
 	this->addChild(tileMap, 0, 100);
@@ -32,8 +37,10 @@ bool Tiled::init()
 	float y = spPoint["y"].asFloat();
 	// 添加精灵
 	player = Sprite::create("ninja.png");
-	player->setContentSize(Size(SPRITE::width, SPRITE::height));
-	player->setPosition(Vec2(x, y));
+	float spriteWidth = Base::getInstance()->getSpriteWidth();
+	float spriteHeight = Base::getInstance()->getSpriteHeight();
+	player->setContentSize(Size(spriteWidth, spriteHeight));
+	player->setPosition(Vec2(x + spriteWidth / 2, y + spriteHeight / 2));
 	this->addChild(player, 2, 200);
 	this->setViewPointCenter(player->getPosition());
 	// 获取碰撞层
@@ -42,10 +49,9 @@ bool Tiled::init()
 	// 添加事件响应
 	setTouchEnabled(true);
 	setTouchMode(Touch::DispatchMode::ONE_BY_ONE);
-
-	return true;
+	//
+	Layer::onEnter();
 }
-
 void Tiled::menuCloseCallback(Ref* pSender)
 {
 	Director::getInstance()->end();
@@ -72,7 +78,7 @@ void Tiled::onTouchEnded(Touch* touch, Event* unused_event)
 
 	if (abs(diff.x) > abs(diff.y)){
 		if (diff.x > 0){
-			playerPos.x += tileMap->getTileSize().width;
+			playerPos.x += (tileMap->getTileSize().width);
 			player->runAction(FlipX::create(false));
 		}
 		else{
@@ -103,7 +109,7 @@ Vec2 Tiled::tileCoordFromPosition(Vec2 position)
 
 	return Vec2(x, y);
 }
-// 获得精灵位置
+// 精灵位置
 void Tiled::setPlayerPosition(Vec2 position)
 {
 	Vec2 tileCoord = this->tileCoordFromPosition(position);
@@ -125,6 +131,7 @@ void Tiled::setPlayerPosition(Vec2 position)
 	}
 	// 设置精灵位置
 	player->setPosition(position);
+
 	// 设置视点
 	this->setViewPointCenter(player->getPosition());
 }
@@ -146,4 +153,10 @@ void Tiled::setViewPointCenter(Vec2 position)
 	Vec2 offset = pointA - pointB;
 
 	this->setPosition(offset);
+	// test
+	test();
+}
+void Tiled::test()
+{
+	
 }

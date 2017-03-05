@@ -15,9 +15,9 @@
   </data>
  </layer>
  <objectgroup name="object">
-  <object id="6" name="zhaoyun" x="33" y="1541" width="24" height="19"/>
+  <object id="6" name="zhaoyun" x="32" y="1548" width="24" height="19"/>
  </objectgroup>
- <layer name="collision" width="50" height="50" opacity="0.42">
+ <layer name="collision" width="50" height="50" opacity="0">
   <properties>
    <property name="Collidable" value="true"/>
   </properties>
