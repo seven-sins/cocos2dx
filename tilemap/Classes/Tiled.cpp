@@ -28,8 +28,9 @@ bool Tiled::init()
 void Tiled::onEnter()
 {
 	// 加载地图
-	tileMap = TMXTiledMap::create("map/snow.tmx");
-	this->addChild(tileMap, 0, 100);
+	tileMap = TMXTiledMap::create("map/scene_02.tmx");
+	tileMap->layerNamed("layer");
+	this->addChild(tileMap, 1, 100);
 	// 获取对象组
 	TMXObjectGroup* group = tileMap->getObjectGroup("object");
 	ValueMap spPoint = group->getObject("zhaoyun");
@@ -48,8 +49,15 @@ void Tiled::onEnter()
 	collidable = tileMap->getLayer("collision");
 	collidable->setVisible(false);
 	// 添加事件响应
-	setTouchEnabled(true);
-	setTouchMode(Touch::DispatchMode::ONE_BY_ONE);
+	// setTouchEnabled(true);
+	// setTouchMode(Touch::DispatchMode::ONE_BY_ONE);
+	// 虚拟摇秆
+
+	TRocker* rocker = TRocker::createTRocker("rocker.png", "rockerBG.png", ccp(60, 60));
+	rocker->setSprite(player);
+	addChild(rocker, 999);
+	rocker->startRocker(true);
+
 	//
 	Layer::onEnter();
 }
@@ -65,7 +73,6 @@ void Tiled::menuCloseCallback(Ref* pSender)
 
 bool Tiled::onTouchBegan(Touch* touch, Event* unused_event)
 {
-
 	return true;
 }
 void Tiled::onTouchEnded(Touch* touch, Event* unused_event)

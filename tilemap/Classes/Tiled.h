@@ -1,30 +1,32 @@
 #pragma once
 #include "cocos2d.h"
 #include "Base.h"
+#include "TRocker.h"
+using namespace cocos2d;
 
-class Tiled : public cocos2d::Layer
+class Tiled : public Layer
 {
 	// 成员变量
-	cocos2d::Sprite* player;
-	cocos2d::TMXTiledMap* tileMap;
-	cocos2d::TMXLayer* collidable;
+	Sprite* player;
+	TMXTiledMap* tileMap;
+	TMXLayer* collidable;
 public:
-	static cocos2d::Scene* createScene();
+	static Scene* createScene();
 	CREATE_FUNC(Tiled);
 	// 
 private:
-	void menuCloseCallback(cocos2d::Ref* pSender);
+	void menuCloseCallback(Ref* pSender);
 	virtual bool init();
 	virtual void onEnter();
-	virtual bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* unused_event);
-	virtual void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* unused_event);
-	virtual void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* unused_event);
+	virtual bool onTouchBegan(Touch* touch, Event* unused_event);
+	virtual void onTouchEnded(Touch* touch, Event* unused_event);
+	virtual void onTouchMoved(Touch* touch, Event* unused_event);
 	// 从当前像素坐标获得tile coord
-	cocos2d::Vec2 tileCoordFromPosition(cocos2d::Vec2 position);
+	Vec2 tileCoordFromPosition(Vec2 position);
 	// 获得精灵位置
-	void setPlayerPosition(cocos2d::Vec2 position);
+	void setPlayerPosition(Vec2 position);
 	// 设置视点
-	void setViewPointCenter(cocos2d::Vec2 position);
+	void setViewPointCenter(Vec2 position);
 	// test
 	void test();
 };

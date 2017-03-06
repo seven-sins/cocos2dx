@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="150" height="150" tilewidth="32" tileheight="32" nextobjectid="2">
+ <tileset firstgid="1" name="m1" tilewidth="32" tileheight="32" tilecount="3880" columns="8">
+  <image source="../a2.png" width="256" height="15520"/>
+ </tileset>
+ <tileset firstgid="3881" name="m2" tilewidth="32" tileheight="32" tilecount="256" columns="16">
+  <image source="../a1.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="4137" name="m3" tilewidth="32" tileheight="32" tilecount="256" columns="16">
+  <image source="../a2.jpg" width="512" height="512"/>
+ </tileset>
+ <layer name="background" width="150" height="150">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3DAQkAAAwEofv+pddjKLhqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqDx8Z4rl1kF8BAA==
+  </data>
+ </layer>
+ <layer name="layer" width="150" height="150">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3UQQ0AIBADwZPAacK/J0RAAyEzCvrYtAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3jXH7QX8SFck6IoEXZGw21X3mR38xV+RoCsSdEWCrgAA4H0LBArRm5BfAQA=
+  </data>
+ </layer>
+ <objectgroup name="object">
+  <object id="1" name="zhaoyun" x="42" y="4755"/>
+ </objectgroup>
+ <layer name="collision" width="150" height="150">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OMQ0AAAgDsD34t4yKhYNWQRMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFrmOgAAAAAAAAAAAADPLdy7UzeQXwEA
+  </data>
+ </layer>
+</map>
